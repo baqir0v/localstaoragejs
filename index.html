@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .inputs {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 60%;
+            margin: 0 auto;
+            padding: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .inputs input {
+            width: 60%;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .inputs button {
+            background-color: #4fc3f7;
+            border-radius: 10px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .inputs button:hover {
+            filter: brightness(90%);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            width: 20%;
+            margin: 20px auto;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+        }
+
+        li div {
+            display: flex;
+            align-items: center;
+        }
+
+        li button {
+            padding: 5px 10px;
+            background-color: #4fc3f7;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        li button:hover{
+            filter: brightness(90%);
+        }
+        .editButton{
+            margin-left: 60px;
+            border-radius: 10px;
+        }
+        .deleteButton{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inputs">
+        <input type="text" id="task" placeholder="Enter">
+        <button id="addTask">Add</button>
+        <button id="deleteAll">Delete All</button>
+    </div>
+    <ul id="taskList"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
